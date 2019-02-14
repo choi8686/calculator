@@ -1,5 +1,4 @@
 var number = Array.from(document.getElementsByClassName('number'));
-
 var operator = Array.from(document.getElementsByClassName('operator'));
 var inputObj = document.getElementById('window');
 var inputOp = document.getElementById('op-window');
@@ -7,10 +6,11 @@ var borrar = document.getElementById('delete');
 var resulta = document.getElementById('result');
 var equal = document.getElementById('eq-operator');
 
-var selectOperator;
+//var selectOperator;
 var firstNumber;
-var firstOperatorNumber;
+//var firstOperatorNumber;
 var secondNumber;
+
 var result;
 
 function touchNumber(){
@@ -21,8 +21,8 @@ number.forEach((numberElement) => {
     inputValue += numberElement.value;
     inputObj.value = inputValue;
     firstNumber = inputObj.value;
-    var tt = parseInt(firstNumber);
-    firstNumber = tt;
+    var num1 = parseFloat(firstNumber);
+    firstNumber = num1;
 
   })
       return numberElement.value;
@@ -31,28 +31,22 @@ number.forEach((numberElement) => {
 }
 
 function getSecondnumber(){
-  if(firstOperatorNumber !== null){
-    inputObj.value = "";
 
+  if(firstNumber !== undefined){
+      inputObj.value = "";
   }
 }
 
 function touchOperator(){
   operator.forEach((operatorElement) =>{
     operatorElement.addEventListener('click', function(event){
-      var inputValue = inputOp.value;
-      inputValue += operatorElement.value;
-      inputOp.value = inputValue;
-
-      selectOperator = inputOp.value;
-      firstOperatorNumber = inputOp.value;
-      console.log(typeof firstOperatorNumber)
-
+      inputOp.value = operatorElement.value;
     })
-        return operatorElement.value;
+  return operatorElement.value;
   })
 
 }
+
 function final(){
 
 }
@@ -61,7 +55,7 @@ function reset(){
   borrar.addEventListener('click', function(event){
    inputObj.value = "";
    inputOp.value = "";
-   result.value = "";
+  firstNumber = undefined;
 });
 
 }

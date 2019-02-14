@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div>
+      <div class="top">
+        <input type="text" id="window" size="11"> <button id="delete">Del</button>
+      </div>
+      <div class="top-2">
+          <input type="text" id="result" size="11">
+            <input type="text" id="op-window" size="1">
+      </div>
+
+      <div class="body">
+        <div>
+          <table>
+            <tbody>
+            <tr>
+              <td><button value="7" class="number">7</button></td>
+              <td><button value="8" class="number">8</button></td>
+              <td><button value="9" class="number">9</button></td>
+              <td><button value="/" class="operator">/</button></td>
+            </tr>
+            <tr>
+              <td><button value="4" class="number">4</button></td>
+              <td><button value="5" class="number">5</button></td>
+              <td><button value="6" class="number">6</button></td>
+              <td><button value="*" class="operator">*</button></td>
+            </tr>
+            <tr>
+              <td><button value="1" class="number">1</button></td>
+              <td><button value="2" class="number">2</button></td>
+              <td><button value="3" class="number">3</button></td>
+              <td><button value="-" class="operator">-</button></td>
+            </tr>
+            <tr>
+              <td><button value="." class="decimal">.</button></td>
+              <td><button value="0" class="number">0</button></td>
+              <td><button value="=" id="eq-operator">=</button></td>
+              <td><button value="+" class="operator">+</button></td>
+            </tr>
+            </tbody>
+    <script src="calculate.js"></script>
+  </body>
+  </html>
