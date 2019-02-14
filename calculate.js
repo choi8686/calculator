@@ -23,6 +23,9 @@ number.forEach((numberElement) => {
     firstNumber = inputObj.value;
     var num1 = parseFloat(firstNumber);
     firstNumber = num1;
+    if(inputOp.value !== ""){
+        inputObj.value = "";
+    }
 
   })
       return numberElement.value;
@@ -30,17 +33,11 @@ number.forEach((numberElement) => {
 
 }
 
-function getSecondnumber(){
-
-  if(firstNumber !== undefined){
-      inputObj.value = "";
-  }
-}
-
 function touchOperator(){
   operator.forEach((operatorElement) =>{
     operatorElement.addEventListener('click', function(event){
       inputOp.value = operatorElement.value;
+
     })
   return operatorElement.value;
   })
@@ -64,7 +61,7 @@ function init(){
   touchNumber();
   reset();
   touchOperator();
-  getSecondnumber();
+
   final();
 }
 init();
